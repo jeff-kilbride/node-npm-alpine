@@ -9,6 +9,11 @@ ENV NPM_VERSION=3
 #   libstdc++-5.3.0-r0
 #   libgcc-5.3.0-r0
 #   nodejs-5.11.0-r0 (with npm 3.9.0)
+#
+# Also, add a basic .profile to the /root directory, for times
+# when we need to login to the container and look around.
+WORKDIR /root
+COPY .profile .
 RUN apk add --no-cache nodejs && \
   if [ -x /usr/bin/npm ]; then \
     npm install -g npm@${NPM_VERSION} && \
