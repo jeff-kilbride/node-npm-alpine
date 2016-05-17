@@ -13,9 +13,6 @@ alias mroe=more
 alias moer=more
 alias mreo=more
 
-# Always list directory contents upon 'cd'
-cd() { builtin cd "$@"; ll; }
-
 # Quick directory movement
 alias ..='cd ../'
 alias ...='cd ../../'
@@ -24,7 +21,7 @@ alias ...='cd ../../'
 alias mkdir='mkdir -pv'
 
 # Color grep
-alias grep='grep --color=auto -in'
+alias grep='grep -in'
 
 # Use vi keybindings
 set -o vi
