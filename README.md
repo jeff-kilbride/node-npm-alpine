@@ -1,5 +1,7 @@
 # Node / NPM Docker Image on Alpine
 
+[![](https://imagelayers.io/badge/jkilbride/node-npm-alpine:latest.svg)](https://imagelayers.io/?images=jkilbride/node-npm-alpine:latest 'Get your own badge on imagelayers.io')
+
 This is a simple Node.js and NPM installation running on Alpine Linux. It utilizes the official alpine:edge release and installs the nodejs package via apk, the Alpine Linux package manager. It also removes some unnecessary files / directories in an attempt to keep the image as small as possible.
 
 This image is a base image, created to enhance my own workflow. You are more than welcome to use it, if you are interested.
@@ -8,7 +10,7 @@ To use this image in your own Dockerfiles, add it to your FROM statement:
 
     FROM jkilbride/node-npm-alpine
 
-
+---
 As an update, I have also now added a simple `.profile` to the `/root` directory for times when I need to login to the container and look around. (I was getting tired of typing `alias ll="ls -lFa"` every time I needed to login...) Be aware that I prefer `vi` keybindings. If you prefer the default `emacs` keybindings, simply type `set -o emacs` at the prompt.
 
 
