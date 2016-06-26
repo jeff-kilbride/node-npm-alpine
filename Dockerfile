@@ -17,7 +17,7 @@ RUN apk upgrade --update \
   && make -j$(grep -c ^processor /proc/cpuinfo 2>/dev/null || 1) \
   && make install \
   && paxctl -cm /usr/bin/node \
-  && cd /root
+  && cd /root \
   && if [ -x /usr/bin/npm ]; then \
        npm install -g npm@${NPM_VERSION} && \
        find /usr/lib/node_modules/npm -name test -o -name .bin -type d | xargs rm -rf; \
