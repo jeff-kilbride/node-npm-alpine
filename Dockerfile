@@ -2,9 +2,9 @@ FROM alpine:3.4
 
 MAINTAINER Jeff Kilbride <jeff@kilbride.com>
 
-ENV NODE_VERSION=v4.4.6 NPM_VERSION=2
+#ENV NODE_VERSION=v4.4.6 NPM_VERSION=2
 #ENV NODE_VERSION=v5.12.0 NPM_VERSION=3
-#ENV NODE_VERSION=v6.2.2 NPM_VERSION=3
+ENV NODE_VERSION=v6.2.2 NPM_VERSION=3
 
 RUN apk upgrade --update \
   && apk add --no-cache curl make gcc g++ python linux-headers paxctl libgcc libstdc++ \
