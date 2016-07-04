@@ -1,12 +1,12 @@
 # Node / NPM Docker Image on Alpine
 
-This is a simple Node.js and NPM installation running on Alpine Linux. I used to install Node using `apk`, the Alpine Linux package manager. However, the move to Node 6.2.0 in Alpine 3.4 brought breaking changes to my code. Unfortunately, previously available packages are not officially available through `apk`, so I have started compiling my own versions in order to have older versions of Node on Alpine  3.4.
+This is a simple Node.js and NPM installation running on Alpine Linux. I used to install Node using `apk`, the Alpine Linux package manager. However, the move to Node 6.2.0 in Alpine 3.4 brought breaking changes to my code. Unfortunately, previously available packages are not officially supported through `apk`, so I have started compiling my own versions in order to have Node 4.x and 5.x on Alpine  3.4.
 
 The following are the current tags I am creating:
 
-* latest, 6, 6.2, 6.2.2
-* 5, 5.12, 5.12.0
-* 4, 4.4, 4.4.6
+* [latest, 6, 6.2, 6.2.2](https://github.com/jeff-kilbride/node-npm-alpine/blob/6/Dockerfile)
+* [5, 5.12, 5.12.0](https://github.com/jeff-kilbride/node-npm-alpine/blob/5/Dockerfile)
+* [4, 4.4, 4.4.7](https://github.com/jeff-kilbride/node-npm-alpine/blob/4/Dockerfile)
 
 I will bump these as Node versions change, but the older versions should remain in this repository. These images are base images, created to enhance my own workflow. You are more than welcome to use them, if you are interested.
 
@@ -41,7 +41,6 @@ Be aware that I prefer `vi` keybindings. If you prefer the default `emacs` keybi
 ## Inspired by
 
 * https://github.com/mhart/alpine-node
-* https://github.com/ZZROTDesign/alpine-node
 
 ## License
 
