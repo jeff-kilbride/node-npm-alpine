@@ -4,7 +4,7 @@ This is a simple Node.js and NPM installation running on Alpine Linux. I used to
 
 The following are the current tags I am creating:
 
-- [latest, 6, 6.3, 6.3.0](https://github.com/jeff-kilbride/node-npm-alpine/blob/6/Dockerfile)
+- [latest, 6, 6.3, 6.3.1](https://github.com/jeff-kilbride/node-npm-alpine/blob/6/Dockerfile)
 - [5, 5.12, 5.12.0](https://github.com/jeff-kilbride/node-npm-alpine/blob/5/Dockerfile)
 - [4, 4.4, 4.4.7](https://github.com/jeff-kilbride/node-npm-alpine/blob/4/Dockerfile)
 
