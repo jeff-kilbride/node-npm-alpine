@@ -29,3 +29,9 @@ RUN apk upgrade --update \
   && mv -f /etc/profile.d/color_prompt /etc/profile.d/color_prompt.sh
 
 COPY aliases.sh /etc/profile.d/
+
+LABEL org.label-schema.docker.dockerfile="/Dockerfile" \
+      org.label-schema.license="MIT" \
+      org.label-schema.name="Node / NPM Alpine" \
+      org.label-schema.vcs-type="Git" \
+      org.label-schema.vcs-url="https://github.com/jeff-kilbride/node-npm-alpine"

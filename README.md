@@ -1,5 +1,7 @@
 # Node / NPM Docker Image on Alpine
 
+[![](https://images.microbadger.com/badges/image/jkilbride/node-npm-alpine.svg)](http://microbadger.com/images/jkilbride/node-npm-alpine "Get your own image badge on microbadger.com")
+
 This is a simple Node.js and NPM installation running on Alpine Linux. I used to install Node using `apk`, the Alpine Linux package manager. However, the move to Node 6.x in Alpine 3.4 brought breaking changes to my code. Unfortunately, previously available packages are not officially supported through `apk`, so I have started compiling my own versions in order to have Node 4.x and 5.x on Alpine 3.4.
 
 The following are the current tags I am creating:
