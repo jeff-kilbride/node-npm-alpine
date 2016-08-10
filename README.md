@@ -6,11 +6,11 @@
 
 This is a simple Node.js and NPM installation running on Alpine Linux. I used to install Node using `apk`, the Alpine Linux package manager. However, the move to Node 6.x in Alpine 3.4 brought breaking changes to my code. Unfortunately, previously available packages are not officially supported through `apk`, so I have started compiling my own versions in order to have Node 4.x and 5.x on Alpine 3.4.
 
-The following are the current tags I am creating:
+The following are the current tags I am creating. NOTE: the size in the badge from MicroBadger.com above is WRONG. Correct file sizes are listed below.
 
-- [latest, 6, 6.3, 6.3.1](https://github.com/jeff-kilbride/node-npm-alpine/blob/6/Dockerfile)
-- [5, 5.12, 5.12.0](https://github.com/jeff-kilbride/node-npm-alpine/blob/5/Dockerfile)
-- [4, 4.4, 4.4.7](https://github.com/jeff-kilbride/node-npm-alpine/blob/4/Dockerfile)
+- [latest, 6, 6.3, 6.3.1](https://github.com/jeff-kilbride/node-npm-alpine/blob/6/Dockerfile) (48.67MB)
+- [5, 5.12, 5.12.0](https://github.com/jeff-kilbride/node-npm-alpine/blob/5/Dockerfile) (37.62MB)
+- [4, 4.4, 4.4.7](https://github.com/jeff-kilbride/node-npm-alpine/blob/4/Dockerfile) (36.2MB)
 
 I will bump these as Node versions change, but the older versions should remain in this repository. These images are base images, created to enhance my own workflow. You are more than welcome to use them, if you are interested.
 
