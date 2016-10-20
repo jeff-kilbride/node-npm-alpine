@@ -16,7 +16,7 @@ The Node/NPM versions in the various tags are:
 
 ```
 $ docker run jkilbride/node-npm-alpine:6 node --version
-v6.9.0
+v6.9.1
 
 $ docker run jkilbride/node-npm-alpine:6 npm --version
 3.10.8
