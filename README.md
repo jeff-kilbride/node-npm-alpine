@@ -4,7 +4,7 @@
 
 This is a simple Node.js and NPM installation running on Alpine Linux. The following are the current tags I am creating. **NOTE:** the size in the badge from MicroBadger.com above is WRONG. Correct file sizes are listed below. However, you can still click on that link to see the correct layers.
 
-- [latest, 7, 7.4, 7.4.0](https://github.com/jeff-kilbride/node-npm-alpine/blob/7/Dockerfile) (53 MB)
+- [latest, 7, 7.4, 7.4.0](https://github.com/jeff-kilbride/node-npm-alpine/blob/7/Dockerfile) (51.5 MB)
 - [6, 6.9, 6.9.3](https://github.com/jeff-kilbride/node-npm-alpine/blob/6/Dockerfile) (47.8 MB)
 - [4, 4.7, 4.7.1](https://github.com/jeff-kilbride/node-npm-alpine/blob/4/Dockerfile) (35 MB)
 
