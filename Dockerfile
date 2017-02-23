@@ -28,14 +28,15 @@ RUN apk upgrade --update \
       DD8F2338BAE7501E3DD5AC78C273792F7D83545D \
       B9AE9905FFD7803F25714661B63B535A4C206CA9 \
       C4F0DFFF4E8C1A8236409D08E73BC641CC11F4C8 \
+      56730D5401028683275BD23C23EFEFE93C4CFFFE \
     && mkdir -p /usr/local/src \
     && cd /usr/local/src \
-    && curl -SLO https://nodejs.org/dist/${NODE_VERSION}/node-${NODE_VERSION}.tar.gz \
-    && curl -SLO https://nodejs.org/dist/${NODE_VERSION}/SHASUMS256.txt.asc \
-    && gpg --verify SHASUMS256.txt.asc \
-    && grep node-${NODE_VERSION}.tar.gz SHASUMS256.txt.asc | sha256sum -c - \
-    && tar -zxf node-${NODE_VERSION}.tar.gz \
-    && cd node-${NODE_VERSION} \
+    && curl -SLO "https://nodejs.org/dist/${NODE_VERSION}/node-${NODE_VERSION}.tar.xz" \
+    && curl -SLO "https://nodejs.org/dist/${NODE_VERSION}/SHASUMS256.txt.asc" \
+    && gpg --batch --decrypt --output SHASUMS256.txt SHASUMS256.txt.asc \
+    && grep " node-${NODE_VERSION}.tar.xz\$" SHASUMS256.txt | sha256sum -c - \
+    && tar -xf "node-${NODE_VERSION}.tar.xz" \
+    && cd "node-${NODE_VERSION}" \
     && ./configure --prefix=/usr \
     && make -j$(getconf _NPROCESSORS_ONLN) \
     && make install \
