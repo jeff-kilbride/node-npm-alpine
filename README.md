@@ -6,7 +6,7 @@ _**UPGRADE NOTICE:** I have upgraded the version 7.x containers to Alpine 3.5. I
 
 This is a simple Node.js and NPM installation running on Alpine Linux. The following are the current tags I am creating. **NOTE:** the size in the badge from MicroBadger.com above is WRONG. Correct file sizes are listed below. However, you can still click on that link to see the correct layers.
 
-- [latest, 7, 7.7, 7.7.2](https://github.com/jeff-kilbride/node-npm-alpine/blob/7/Dockerfile) (55.2 MB)
+- [latest, 7, 7.7, 7.7.3](https://github.com/jeff-kilbride/node-npm-alpine/blob/7/Dockerfile) (50.9 MB)
 - [6, 6.10, 6.10.0](https://github.com/jeff-kilbride/node-npm-alpine/blob/6/Dockerfile) (50.3 MB)
 - [4, 4.8, 4.8.0](https://github.com/jeff-kilbride/node-npm-alpine/blob/4/Dockerfile) (37.3 MB)
 
@@ -16,10 +16,10 @@ The Node/NPM versions in the various tags are:
 
 ```
 $ docker run --rm jkilbride/node-npm-alpine:7 node --version
-v7.7.2
+v7.7.3
 
 $ docker run --rm jkilbride/node-npm-alpine:7 npm --version
-4.3.0
+4.4.1
 
 $ docker run --rm jkilbride/node-npm-alpine:6 node --version
 v6.10.0

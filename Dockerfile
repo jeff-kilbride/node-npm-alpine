@@ -4,7 +4,7 @@ MAINTAINER Jeff Kilbride <jeff@kilbride.com>
 
 #ENV NODE_VERSION=v4.8.0 NPM_VERSION=2
 #ENV NODE_VERSION=v6.10.0 NPM_VERSION=3
-ENV NODE_VERSION=v7.7.2 NPM_VERSION=4
+ENV NODE_VERSION=v7.7.3 NPM_VERSION=4
 
 RUN apk upgrade --update \
     && apk add --no-cache \
