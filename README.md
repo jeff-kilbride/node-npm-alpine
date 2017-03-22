@@ -2,13 +2,13 @@
 
 [![](https://images.microbadger.com/badges/image/jkilbride/node-npm-alpine.svg)](http://microbadger.com/images/jkilbride/node-npm-alpine "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/jkilbride/node-npm-alpine.svg)](http://microbadger.com/images/jkilbride/node-npm-alpine "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/license/jkilbride/node-npm-alpine.svg)](http://microbadger.com/images/jkilbride/node-npm-alpine "Get your own license badge on microbadger.com")
 
-_**UPGRADE NOTICE:** I have upgraded the version 7.x containers to Alpine 3.5. If there are no issues with the build, I will most likely upgrade the 4.x and 6.x containers to Alpine 3.5 in the near future._
+_**UPGRADE NOTICE:** I have upgraded all containers to Alpine 3.5.
 
 This is a simple Node.js and NPM installation running on Alpine Linux. The following are the current tags I am creating. **NOTE:** the size in the badge from MicroBadger.com above is WRONG. Correct file sizes are listed below. However, you can still click on that link to see the correct layers.
 
-- [latest, 7, 7.7, 7.7.3](https://github.com/jeff-kilbride/node-npm-alpine/blob/7/Dockerfile) (50.9 MB)
-- [6, 6.10, 6.10.0](https://github.com/jeff-kilbride/node-npm-alpine/blob/6/Dockerfile) (50.3 MB)
-- [4, 4.8, 4.8.0](https://github.com/jeff-kilbride/node-npm-alpine/blob/4/Dockerfile) (37.3 MB)
+- [latest, 7, 7.7, 7.7.4](https://github.com/jeff-kilbride/node-npm-alpine/blob/7/Dockerfile) (50.9 MB)
+- [6, 6.10, 6.10.1](https://github.com/jeff-kilbride/node-npm-alpine/blob/6/Dockerfile) (50.3 MB)
+- [4, 4.8, 4.8.1](https://github.com/jeff-kilbride/node-npm-alpine/blob/4/Dockerfile) (37.3 MB)
 
 I will bump these as Node versions change, but the older versions should remain in this repository. These images are base images, created to enhance my own workflow. You are more than welcome to use them, if you are interested.
 
@@ -16,19 +16,19 @@ The Node/NPM versions in the various tags are:
 
 ```
 $ docker run --rm jkilbride/node-npm-alpine:7 node --version
-v7.7.3
+v7.7.4
 
 $ docker run --rm jkilbride/node-npm-alpine:7 npm --version
 4.4.1
 
 $ docker run --rm jkilbride/node-npm-alpine:6 node --version
-v6.10.0
+v6.10.1
 
 $ docker run --rm jkilbride/node-npm-alpine:6 npm --version
 3.10.10
 
 $ docker run --rm jkilbride/node-npm-alpine:4 node --version
-v4.8.0
+v4.8.1
 
 $ docker run --rm jkilbride/node-npm-alpine:4 npm --version
 2.15.11
