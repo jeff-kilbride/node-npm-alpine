@@ -2,9 +2,9 @@ FROM alpine:3.5
 
 MAINTAINER Jeff Kilbride <jeff@kilbride.com>
 
-ENV NODE_VERSION=v4.8.2 NPM_VERSION=2
+#ENV NODE_VERSION=v4.8.2 NPM_VERSION=2
 #ENV NODE_VERSION=v6.10.2 NPM_VERSION=3
-#ENV NODE_VERSION=v7.8.0 NPM_VERSION=4
+ENV NODE_VERSION=v7.9.0 NPM_VERSION=4
 
 RUN apk upgrade --update \
     && apk add --no-cache \
