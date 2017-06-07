@@ -8,7 +8,7 @@ This is a simple Node.js and NPM installation running on Alpine Linux. The follo
 
 - [latest, 8, 8.0, 8.0.0](https://github.com/jeff-kilbride/node-npm-alpine/blob/8/Dockerfile) (59.9 MB)
 - [latest, 7, 7.10, 7.10.0](https://github.com/jeff-kilbride/node-npm-alpine/blob/7/Dockerfile) (54.1 MB)
-- [6, 6.10, 6.10.3](https://github.com/jeff-kilbride/node-npm-alpine/blob/6/Dockerfile) (46.1 MB)
+- [6, 6.11, 6.11.0](https://github.com/jeff-kilbride/node-npm-alpine/blob/6/Dockerfile) (46.1 MB)
 - [4, 4.8, 4.8.3](https://github.com/jeff-kilbride/node-npm-alpine/blob/4/Dockerfile) (32.5 MB)
 
 I will bump these as Node versions change, but the older versions should remain in this repository. These images are base images, created to enhance my own workflow. You are more than welcome to use them, if you are interested.
@@ -32,10 +32,13 @@ $ docker run --rm jkilbride/node-npm-alpine:7 npm --version
 4.5.0
 
 $ docker run --rm jkilbride/node-npm-alpine:6 node --version
-v6.10.3
+v6.11.0
 
 $ docker run --rm jkilbride/node-npm-alpine:6 npm --version
 3.10.10
+
+$ docker run --rm jkilbride/node-npm-alpine:6 yarn --version
+0.24.6
 
 $ docker run --rm jkilbride/node-npm-alpine:4 node --version
 v4.8.3
