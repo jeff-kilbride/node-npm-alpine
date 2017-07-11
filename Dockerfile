@@ -3,11 +3,10 @@ FROM alpine:3.6
 MAINTAINER Jeff Kilbride <jeff@kilbride.com>
 
 #ENV NODE_VERSION=v4.8.3 NPM_VERSION=2
-#ENV NODE_VERSION=v6.11.0 NPM_VERSION=3
-#ENV NODE_VERSION=v7.10.0 NPM_VERSION=4
+#ENV NODE_VERSION=v6.11.1 NPM_VERSION=3
 ENV NODE_VERSION=v8.1.4 NPM_VERSION=5
 
-ENV YARN_VERSION=latest
+ENV YARN_VERSION=0.27.5
 
 RUN apk upgrade --update \
     && apk add --no-cache \
@@ -48,12 +47,13 @@ RUN apk upgrade --update \
     && cd /usr/local/src \
     && gpg --keyserver ha.pool.sks-keyservers.net --recv-keys \
       6A010C5166006599AA17F08146C2130DFD2497F5 \
-    && curl -fSLO "https://yarnpkg.com/${YARN_VERSION}.tar.gz" \
-    && curl -fSLO --compressed "https://yarnpkg.com/${YARN_VERSION}.tar.gz.asc" \
-    && gpg --batch --verify ${YARN_VERSION}.tar.gz.asc ${YARN_VERSION}.tar.gz \
+    && curl -fSLO "https://yarnpkg.com/downloads/${YARN_VERSION}/yarn-v${YARN_VERSION}.tar.gz" \
+    && curl -fSLO --compressed "https://yarnpkg.com/downloads/${YARN_VERSION}/yarn-v${YARN_VERSION}.tar.gz.asc" \
+    && gpg --batch --verify yarn-v${YARN_VERSION}.tar.gz.asc yarn-v${YARN_VERSION}.tar.gz \
     && mkdir /root/.yarn \
-    && tar -xf ${YARN_VERSION}.tar.gz -C /root/.yarn --strip 1 \
-    && ln -s /root/.yarn/bin/yarn /usr/bin/ \
+    && tar -xzf yarn-v${YARN_VERSION}.tar.gz -C /root/.yarn --strip 1 \
+    && ln -s /root/.yarn/bin/yarn /usr/bin/yarn \
+    && ln -s /root/.yarn/bin/yarn /usr/bin/yarnpkg \
     && apk del .build-deps \
     && rm -rf /usr/local/src /tmp/* /usr/share/man /var/cache/apk/* \
       /root/.npm /root/.node-gyp /root/.gnupg /usr/lib/node_modules/npm/man \
