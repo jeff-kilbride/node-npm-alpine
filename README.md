@@ -2,13 +2,11 @@
 
 [![](https://images.microbadger.com/badges/image/jkilbride/node-npm-alpine.svg)](http://microbadger.com/images/jkilbride/node-npm-alpine "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/jkilbride/node-npm-alpine.svg)](http://microbadger.com/images/jkilbride/node-npm-alpine "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/license/jkilbride/node-npm-alpine.svg)](http://microbadger.com/images/jkilbride/node-npm-alpine "Get your own license badge on microbadger.com")
 
-**UPGRADE NOTICE:** I am upgrading all containers to Alpine 3.6 and adding Yarn to the mix, starting with v8.0.0. The rest will be upgraded with their next releases.
-
 This is a simple Node.js and NPM installation running on Alpine Linux. The following are the current tags I am creating. **NOTE:** the size in the badge from MicroBadger.com above is WRONG. Correct file sizes are listed below. However, you can still click on that link to see the correct layers.
 
 - [latest, 8, 8.1, 8.1.4](https://github.com/jeff-kilbride/node-npm-alpine/blob/8/Dockerfile) (61.6 MB)
-- [6, 6.11, 6.11.1](https://github.com/jeff-kilbride/node-npm-alpine/blob/6/Dockerfile) (49.9 MB)
-- [4, 4.8, 4.8.4](https://github.com/jeff-kilbride/node-npm-alpine/blob/4/Dockerfile) (32.5 MB)
+- [6, 6.11, 6.11.1](https://github.com/jeff-kilbride/node-npm-alpine/blob/6/Dockerfile) (49.8 MB)
+- [4, 4.8, 4.8.4](https://github.com/jeff-kilbride/node-npm-alpine/blob/4/Dockerfile) (32.5MB)
 
 I will bump these as Node versions change, but the older versions should remain in this repository. These images are base images, created to enhance my own workflow. You are more than welcome to use them, if you are interested.
 
