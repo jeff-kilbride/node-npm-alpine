@@ -36,6 +36,9 @@ v4.8.4
 
 $ docker run --rm jkilbride/node-npm-alpine:4 npm --version
 2.15.11
+
+$ docker run --rm jkilbride/node-npm-alpine:4 yarn --version
+0.27.5
 ```
 ---
 
