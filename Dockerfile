@@ -1,10 +1,8 @@
 FROM alpine:3.6
 
-MAINTAINER Jeff Kilbride <jeff@kilbride.com>
-
-ENV NODE_VERSION=v4.8.4 NPM_VERSION=2
+#ENV NODE_VERSION=v4.8.4 NPM_VERSION=2
 #ENV NODE_VERSION=v6.11.1 NPM_VERSION=3
-#ENV NODE_VERSION=v8.1.4 NPM_VERSION=5
+ENV NODE_VERSION=v8.1.4 NPM_VERSION=5
 
 ENV YARN_VERSION=0.27.5
 
@@ -63,7 +61,8 @@ RUN apk upgrade --update \
 
 COPY aliases.sh /etc/profile.d/
 
-LABEL org.label-schema.docker.dockerfile="/Dockerfile" \
+LABEL maintainer="Jeff Kilbride <jeff@kilbride.com>" \
+      org.label-schema.docker.dockerfile="/Dockerfile" \
       org.label-schema.license="MIT" \
       org.label-schema.name="Node / NPM Alpine" \
       org.label-schema.vcs-type="Git" \

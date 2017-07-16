@@ -17,7 +17,7 @@ $ docker run --rm jkilbride/node-npm-alpine:8 node --version
 v8.1.4
 
 $ docker run --rm jkilbride/node-npm-alpine:8 npm --version
-5.2.0
+5.3.0
 
 $ docker run --rm jkilbride/node-npm-alpine:8 yarn --version
 0.27.5
