@@ -32,6 +32,7 @@ RUN apk upgrade --update \
       gpg --keyserver pgp.mit.edu --recv-keys "$key" || \
       gpg --keyserver keyserver.pgp.com --recv-keys "$key" || \
       gpg --keyserver ha.pool.sks-keyservers.net --recv-keys "$key" ; \
+    done \
     && mkdir -p /usr/local/src \
     && cd /usr/local/src \
     && curl -SLO "https://nodejs.org/dist/${NODE_VERSION}/node-${NODE_VERSION}.tar.xz" \
