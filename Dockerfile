@@ -49,8 +49,13 @@ RUN apk upgrade --update \
          find /usr/lib/node_modules/npm -name test -o -name .bin -type d | xargs rm -rf; \
        fi \
     && cd /usr/local/src \
-    && gpg --keyserver ha.pool.sks-keyservers.net --recv-keys \
+    && for key in \
       6A010C5166006599AA17F08146C2130DFD2497F5 \
+    ; do \
+      gpg --keyserver pgp.mit.edu --recv-keys "$key" || \
+      gpg --keyserver keyserver.pgp.com --recv-keys "$key" || \
+      gpg --keyserver ha.pool.sks-keyservers.net --recv-keys "$key" ; \
+    done \
     && curl -fSLO "https://yarnpkg.com/downloads/${YARN_VERSION}/yarn-v${YARN_VERSION}.tar.gz" \
     && curl -fSLO --compressed "https://yarnpkg.com/downloads/${YARN_VERSION}/yarn-v${YARN_VERSION}.tar.gz.asc" \
     && gpg --batch --verify yarn-v${YARN_VERSION}.tar.gz.asc yarn-v${YARN_VERSION}.tar.gz \
