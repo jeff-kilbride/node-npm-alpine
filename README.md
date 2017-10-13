@@ -10,7 +10,7 @@ This is a simple Node.js and NPM installation running on Alpine Linux. The follo
 
 I will bump these as Node versions change, but the older versions should remain in this repository. These images are base images, created to enhance my own workflow. You are more than welcome to use them, if you are interested.
 
-**UPDATE:** I have upgraded nvmyarn to 1.x in the Node v6.x images.  
+**UPDATE:** I have upgraded yarn to 1.x in the Node v6.x images.  
 
 The Node/NPM versions in the various tags are:
 
