@@ -4,43 +4,41 @@
 
 This is a simple Node.js and NPM installation running on Alpine Linux. The following are the current tags I am creating. **NOTE:** the size in the badge from MicroBadger.com above is WRONG. Correct file sizes are listed below. However, you can still click on that link to see the correct layers.
 
-- [latest, 8, 8.7, 8.7.0](https://github.com/jeff-kilbride/node-npm-alpine/blob/8/Dockerfile) (66.1 MB)
-- [6, 6.11, 6.11.4](https://github.com/jeff-kilbride/node-npm-alpine/blob/6/Dockerfile) (53.6 MB)
-- [4, 4.8, 4.8.4](https://github.com/jeff-kilbride/node-npm-alpine/blob/4/Dockerfile) (36.3MB)
+- [latest, 8, 8.8, 8.8.0](https://github.com/jeff-kilbride/node-npm-alpine/blob/8/Dockerfile) (66.1 MB)
+- [6, 6.11, 6.11.5](https://github.com/jeff-kilbride/node-npm-alpine/blob/6/Dockerfile) (53.6 MB)
+- [4, 4.8, 4.8.5](https://github.com/jeff-kilbride/node-npm-alpine/blob/4/Dockerfile) (36.3MB)
 
 I will bump these as Node versions change, but the older versions should remain in this repository. These images are base images, created to enhance my own workflow. You are more than welcome to use them, if you are interested.
-
-**UPDATE:** I have upgraded yarn to 1.x in the Node v6.x images.  
 
 The Node/NPM versions in the various tags are:
 
 ```
 $ docker run --rm jkilbride/node-npm-alpine:8 node --version
-v8.7.0
+v8.8.0
 
 $ docker run --rm jkilbride/node-npm-alpine:8 npm --version
-5.4.2
+5.5.1
 
 $ docker run --rm jkilbride/node-npm-alpine:8 yarn --version
 1.2.1
 
 $ docker run --rm jkilbride/node-npm-alpine:6 node --version
-v6.11.4
+v6.11.5
 
 $ docker run --rm jkilbride/node-npm-alpine:6 npm --version
 3.10.10
 
 $ docker run --rm jkilbride/node-npm-alpine:6 yarn --version
-1.1.0
+1.2.1
 
 $ docker run --rm jkilbride/node-npm-alpine:4 node --version
-v4.8.4
+v4.8.5
 
 $ docker run --rm jkilbride/node-npm-alpine:4 npm --version
 2.15.12
 
 $ docker run --rm jkilbride/node-npm-alpine:4 yarn --version
-0.27.5
+1.2.1
 ```
 ---
 
