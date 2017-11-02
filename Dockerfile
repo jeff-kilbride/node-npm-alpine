@@ -21,7 +21,6 @@ RUN apk upgrade --update \
         make \
         python \
     && for key in \
-      9554F04D7259F04124DE6B476D5A82AC7E37093B \
       94AE36675C464D64BAFA68DD7434390BDBE9B9C5 \
       FD3A5288F042B6850C66B31F09FE44734EB7990E \
       71DCFD284A79C3B38668286BC97EC7A07EDE3FC1 \
@@ -29,6 +28,7 @@ RUN apk upgrade --update \
       B9AE9905FFD7803F25714661B63B535A4C206CA9 \
       C4F0DFFF4E8C1A8236409D08E73BC641CC11F4C8 \
       56730D5401028683275BD23C23EFEFE93C4CFFFE \
+      77984A986EBC2AA786BC0F66B01FBB92821C587A \
     ; do \
       gpg --keyserver pgp.mit.edu --recv-keys "$key" || \
       gpg --keyserver keyserver.pgp.com --recv-keys "$key" || \
@@ -60,10 +60,10 @@ RUN apk upgrade --update \
     && curl -fSLO "https://yarnpkg.com/downloads/${YARN_VERSION}/yarn-v${YARN_VERSION}.tar.gz" \
     && curl -fSLO --compressed "https://yarnpkg.com/downloads/${YARN_VERSION}/yarn-v${YARN_VERSION}.tar.gz.asc" \
     && gpg --batch --verify yarn-v${YARN_VERSION}.tar.gz.asc yarn-v${YARN_VERSION}.tar.gz \
-    && mkdir /root/.yarn \
-    && tar -xzf yarn-v${YARN_VERSION}.tar.gz -C /root/.yarn --strip 1 \
-    && ln -s /root/.yarn/bin/yarn /usr/bin/yarn \
-    && ln -s /root/.yarn/bin/yarn /usr/bin/yarnpkg \
+    && mkdir -p /opt/yarn \
+    && tar -xzf yarn-v${YARN_VERSION}.tar.gz -C /opt/yarn --strip 1 \
+    && ln -s /opt/yarn/bin/yarn /usr/bin/yarn \
+    && ln -s /opt/yarn/bin/yarn /usr/bin/yarnpkg \
     && apk del .build-deps \
     && rm -rf /usr/local/src /tmp/* /usr/share/man /var/cache/apk/* \
       /root/.npm /root/.node-gyp /root/.gnupg /usr/lib/node_modules/npm/man \
