@@ -2,11 +2,9 @@
 
 [![](https://images.microbadger.com/badges/image/jkilbride/node-npm-alpine.svg)](http://microbadger.com/images/jkilbride/node-npm-alpine "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/jkilbride/node-npm-alpine.svg)](http://microbadger.com/images/jkilbride/node-npm-alpine "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/license/jkilbride/node-npm-alpine.svg)](http://microbadger.com/images/jkilbride/node-npm-alpine "Get your own license badge on microbadger.com")
 
-### Deprecation notice and end of support.
+**Deprecation notice and end of support.**
 
-_The current container versions -- 9.1.0, 8.9.1, 6.12.0, 4.8.6 -- will be the last versions I produce and publish to Docker Hub. When I started creating these containers, the official Node Docker releases were not available on Alpine Linux. I took it upon myself to create these containers to support my own development workflow and to help myself learn more about Docker. I was hoping others might also find them useful. Since that time, the Node Docker team has begun publishing official Alpine Linux containers of their own. I now feel that these containers are no longer necessary and I have begun to move my own development environment over to using the official releases. I encourage anyone using these containers to also check out the official Node Alpine versions. If anyone would like to continue publishing these containers, you are more than welcome to fork my Github repo and pick up where I leave off._
-
-_Thanks for the 10K+ downloads! It's been fun..._
+_The current container versions -- 9.1.0, 8.9.1, 6.12.0, 4.8.6 -- will be the last versions I produce and publish to Docker Hub. When I started creating these containers, the official Node Docker releases were not available on Alpine Linux. I took it upon myself to create these containers to support my own development workflow and to help myself learn more about Docker. I was hoping others might also find them useful. Since that time, the Node Docker team has begun publishing official Alpine Linux containers of their own. I now feel that these containers are no longer necessary and I have begun to move my own development environment over to using the official releases. I encourage anyone using these containers to also check out the official Node Alpine versions. If anyone would like to continue publishing these containers, you are more than welcome to fork my Github repo and pick up where I leave off!_
 
 ---
 
